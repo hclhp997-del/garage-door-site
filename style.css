@@ -1,0 +1,181 @@
+body { font-family: sans-serif; margin: 0; background: #fdfdfd; }
+nav { background: #333; color: white; padding: 15px; text-align: center; font-weight: bold; }
+header { background: #3498db; color: white; padding: 40px; text-align: center; }
+.container { max-width: 900px; margin: auto; padding: 20px; }
+.gallery { display: flex; gap: 10px; margin-bottom: 40px; }
+.item { flex: 1; background: #ddd; height: 150px; display: flex; align-items: center; justify-content: center; border-radius: 5px; }
+.form-container { background: white; padding: 20px; border: 1px solid #eee; border-radius: 10px; }
+input, textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; }
+button { background: #2ecc71; color: white; border: none; padding: 15px; width: 100%; border-radius: 5px; cursor: pointer; }
+.service-area {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 50%; /* This keeps the map at a nice aspect ratio */
+    position: relative;
+    height: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.town-list {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.reviews-section {
+    padding: 60px 20px;
+    background-color: #f0f4f8; /* A light blue/grey background to separate it from other sections */
+    text-align: center;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.review-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-bottom: 4px solid #3498db; /* Adds a nice stripe of color at the bottom */
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px); /* Makes the card "float" when you hover over it */
+}
+
+.stars {
+    color: #f1c40f; /* Gold color for the stars */
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.review-card p {
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+}
+
+.customer-name {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+.faq-section {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.faq-container {
+    margin-top: 30px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+    background: #fff;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2c3e50;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background: #f8f9fa;
+}
+
+/* This hides the answer by default */
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: #fff;
+}
+
+.faq-answer p {
+    padding-bottom: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* This class will be added via JavaScript when clicked */
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Adjust based on answer length */
+}
+
+.faq-item.active .faq-question {
+    background: #e1f0fa;
+    color: #3498db;
+}
+
+.floating-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366; /* WhatsApp Green */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000; /* Keeps it above everything else */
+    transition: transform 0.3s ease;
+}
+
+.floating-chat:hover {
+    transform: scale(1.1);
+    background-color: #128c7e;
+}
+
+.chat-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* On very small phones, hide the text and just show the icon */
+@media (max-width: 400px) {
+    .chat-text { display: none; }
+    .floating-chat { padding: 15px; border-radius: 50%; }
+    .chat-icon { margin-right: 0; }
+}

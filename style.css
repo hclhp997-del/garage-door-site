@@ -179,3 +179,85 @@ button { background: #2ecc71; color: white; border: none; padding: 15px; width: 
     .floating-chat { padding: 15px; border-radius: 50%; }
     .chat-icon { margin-right: 0; }
 }
+/* 1. The Global Fix */
+* {
+    box-sizing: border-box; /* Prevents padding from breaking your layout */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    color: #333;
+    /* This ensures the whole page is centered if it's super wide */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 2. The Main Container */
+/* This is the "Box" that holds your website in the center */
+.container {
+    width: 90%;            /* Works great on mobile */
+    max-width: 1100px;     /* Keeps it from getting too wide on desktop */
+    margin: 0 auto;        /* The MAGIC line: Centered Top/Bottom 0, Left/Right Auto */
+    padding: 20px;
+}
+
+/* 3. Center the Header Content */
+header {
+    width: 100%;
+    background: #2c3e50;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;    /* Centers your H1 and P tag */
+}
+
+/* 4. Aligning the Sections */
+section {
+    width: 100%;
+    margin-bottom: 50px;
+    text-align: center;    /* Centers headings like "Our Work" or "Reviews" */
+}
+
+/* 5. The Gallery Grid Alignment */
+.grid, .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center; /* Centers the cards if there are only 1 or 2 */
+    text-align: left;        /* Keeps the text inside the cards looking professional */
+}
+
+/* 6. Centering the Form */
+.form-container {
+    max-width: 600px;      /* Forms look better when they aren't full-width */
+    margin: 30px auto;     /* Centers the form box */
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: left;      /* Keeps labels aligned to the left inside the centered box */
+}
+/* This rule forces ALL images to stay within their bounds */
+img {
+    max-width: 100%;  /* Image can't be wider than its parent div */
+    height: auto;     /* Maintains the correct proportions so it doesn't look squished */
+    display: block;   /* Removes the tiny gap at the bottom of images */
+}
+
+
+
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    
+    /* ADD THIS LINE */
+    gap: 25px; /* You can change 25px to 10px or 50px depending on the look you want */
+    
+    width: 100%;
+    margin-top: 20px;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garage Door Paint Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>Professional Garage Door Painting</nav>
+    
+    <header>
+        <h1>Instant Curb Appeal</h1>
+        <p>Expert painting for all types of garage doors.</p>
+    </header>
+
+    <main class="container">
+        <h2>Our Work</h2>
+        <div class="gallery">
+            <img src="images/4.jpeg">
+            <img src="images/5.jpeg">
+            <img src="images/4.jpeg">
+            
+        </div>
+
+        
+
+        <section class="reviews-section">
+    <h2>What Your Neighbors Are Saying</h2>
+    <div class="reviews-grid">
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"Our garage door looks brand new! The finish is perfectly smooth and it really changed the look of our house."</p>
+            <span class="customer-name">- Sarah M., Belleville</span>
+        </div>
+
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"Fast, professional, and zero mess. I was worried about overspray on my driveway, but they taped everything perfectly."</p>
+            <span class="customer-name">- James T., Trenton</span>
+        </div>
+
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"Highly recommend! They helped us pick the perfect Charcoal Grey to match our front door. Great communication."</p>
+            <span class="customer-name">- Linda K., Quinte West</span>
+        </div>
+    </div>
+</section>
+
+<div class="review-card">
+    <img src="images/sarah-door-small.jpg" class="review-img">
+    <div class="stars">★★★★★</div>
+    ...
+</div>
+
+<section class="faq-section">
+    <h2>Common Questions</h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">What kind of paint do you use?</button>
+            <div class="faq-answer">
+                <p>We use high-quality, weather-resistant industrial coatings specifically designed for metal and vinyl garage doors. These paints are UV-resistant to prevent fading in the sun.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">How much does it cost to paint a double garage door?</button>
+            <div class="faq-answer">
+                <p>Pricing varies based on the door's condition and size, but most standard double doors range between $500 and $999, including all materials and labor.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">How long does the job take?</button>
+            <div class="faq-answer">
+                <p>Most projects are completed in a single day. We arrive in the morning to clean and prep, and the painting is usually finished by mid-afternoon.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="service-area">
+    <h2>Our Service Area</h2>
+    <p>We provide professional garage door painting in Belleville and surrounding areas.</p>
+    
+    <div class="map-responsive">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d182935.36872020477!2d-77.52595167967556!3d44.24072755776169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d628959475af49%3A0x5037b28c7231730!2sBelleville%2C%20ON!5e0!3m2!1sen!2sca!4v1775250499488!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                width="600" height="450" style="border:0;" 
+                allowfullscreen="" loading="lazy">
+                <div class="town-list">
+    <span>✓ Belleville</span>
+    <span>✓ Trenton</span>
+    <span>✓ Quinte West</span>
+    <span>✓ Prince Edward County</span>
+</div>
+        </iframe>
+    </div>
+</section>
+        <section class="form-container">
+            <h2>Get a Free Estimate</h2>
+            <form action="/contact" method="POST">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="phone" name="phone" placeholder="phone number" required>
+                <textarea name="message" placeholder="Describe your project..."></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+
+<script>
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const item = question.parentElement;
+            
+            // Close other open items (Optional)
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                if (otherItem !== item) otherItem.classList.remove('active');
+            });
+
+            // Toggle the clicked item
+            item.classList.toggle('active');
+        });
+    });
+</script>
+
+<a href="https://wa.me/+16139702842?text=Hi!%20I'm%20interested%20in%20a%20garage%20door%20painting%20quote." class="floating-chat" target="_blank">
+    <span class="chat-icon">💬</span>
+    <span class="chat-text">Text for Quote</span>
+</a>
+
+</body>
+</html>
